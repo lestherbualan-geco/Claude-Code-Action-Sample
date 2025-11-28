@@ -1,0 +1,35 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Dashboard</h1>
+    <button (click)="logout()" class="btn-logout">Logout</button>
+  </div>
+
+  <div class="dashboard-content">
+    @if (currentUser) {
+    <div class="welcome-card">
+      <h2>Welcome, {{ currentUser.name }}!</h2>
+      <div class="user-info">
+        <p><strong>Name:</strong> {{ currentUser.name }}</p>
+        <p><strong>Username:</strong> {{ currentUser.username }}</p>
+      </div>
+    </div>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <h3>Profile</h3>
+        <p>View and manage your profile information</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Settings</h3>
+        <p>Configure your account settings</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Activity</h3>
+        <p>Track your recent activities</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>
